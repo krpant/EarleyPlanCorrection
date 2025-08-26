@@ -1,9 +1,7 @@
 **Contains the implementation of hierarchical plan correction by top-down parsing inspired by the Earley parser and benchmarks from [^1].**
 
 ### Implementation
-Language and framework:
-C# 13.0
-.NET 9.0
+Language and framework: C# 13.0, .NET 9.0
 
 Plan correction can be executed as follows:
 `EarleyPlanCorrector.exe domain_file problem_file invalid_plan_file csv_result_file po2 timeout_in_seconds action_insertion_allowed=y/n action_deletion_allowed=y/n anytime_solutions=y/n`

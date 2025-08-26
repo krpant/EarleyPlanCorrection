@@ -1,0 +1,40 @@
+(define
+	(problem sat_B)
+	(:domain  satellite2)
+	(:objects
+		instrument0_1 - instrument
+		instrument0_2 - instrument
+		instrument1_1 - instrument
+		instrument1_2 - instrument
+		satellite0 - satellite
+		satellite1 - satellite
+		thermograph0 - mode
+		groundstation2 - calib_direction
+		phenomenon6 - image_direction
+		phenomenon4 - image_direction
+	)
+	(:htn
+		:parameters ()
+		:subtasks (and
+		 (task0 (do_observation phenomenon4 thermograph0))
+		)
+	)
+	(:init
+		(on_board instrument0_1 satellite0)
+		(supports instrument0_1 thermograph0)
+		(on_board instrument0_2 satellite0)
+		(supports instrument0_2 thermograph0)
+		(calibration_target instrument0_1 groundstation2)
+		(calibration_target instrument0_2 groundstation2)
+		(power_avail satellite0)
+		(pointing satellite0 phenomenon6)
+		(on_board instrument1_1 satellite1)
+		(supports instrument1_1 thermograph0)
+		(on_board instrument1_2 satellite1)
+		(supports instrument1_2 thermograph0)
+		(calibration_target instrument1_1 groundstation2)
+		(calibration_target instrument1_2 groundstation2)
+		(power_avail satellite1)
+		(pointing satellite1 phenomenon6)
+	)
+)
